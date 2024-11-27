@@ -4,8 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'selector',
-    ///loadChildren: //lazyload
-
+    loadChildren: () => import('./countries/countries.module').then( m => m.CountriesModule),
   },
   {
     path: '**',
